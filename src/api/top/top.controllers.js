@@ -10,7 +10,7 @@ const getTops = async (req, res, next) => {
 }
 const newTop = async (req, res, next) => {
     try {
-        const newTop = await new Top(req.body)
+        const newTop = new Top(req.body)
         await newTop.save()
         return res.json(newTop)
     } catch (error) {
